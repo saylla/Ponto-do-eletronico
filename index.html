@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo dos Eletrônicos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="bg-dark text-white">
+        <div class="logo">
+            <img src="imagens/logo/logo2.png" alt="Aonde Você encontra os seus Eletrônicos">
+          </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 py-3">Mundo dos Eletrônicos</h1>
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Produtos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Categorias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login / Cadastro</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Acompanhar Pedidos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mt-4">
+        <!-- Produtos em Destaque -->
+        <section class="highlighted-products mb-4">
+            <h2 class="text-center mb-4">Produtos em Destaque</h2>
+            <div class="row">
+                <!-- Produtos -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Fone de Ouvido.jpg" class="card-img-top" alt="Fone de Ouvido">
+                        <div class="card-body">
+                            <h5 class="card-title">Fone de Ouvido</h5>
+                            <p class="card-text">Fone de ouvido com excelente qualidade de som.
+                               <br> R$149,99 </p>
+                            <button class="btn btn-primary buy-now" data-product="Fone de Ouvido">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Joystick.jpg" class="card-img-top" alt="Joystick">
+                        <div class="card-body">
+                            <h5 class="card-title">Joystick</h5>
+                            <p class="card-text">Joystick para jogos com alta precisão.</p>
+                            <button class="btn btn-primary buy-now" data-product="Joystick">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Game Portátil.jpg" class="card-img-top" alt="Game Portátil">
+                        <div class="card-body">
+                            <h5 class="card-title">Game Portátil</h5>
+                            <p class="card-text">Console portátil com uma vasta seleção de jogos.</p>
+                            <button class="btn btn-primary buy-now" data-product="Game Portátil">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Carregador Turbo.jpg" class="card-img-top" alt="Carregador">
+                        <div class="card-body">
+                            <h5 class="card-title">Carregador</h5>
+                            <p class="card-text">Carregador rápido para diversos dispositivos.</p>
+                            <button class="btn btn-primary buy-now" data-product="Carregador">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repetir o padrão acima para adicionar mais produtos -->
+                <!-- Produtos Adicionais -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Cabo USB.png" class="card-img-top" alt="Cabo USB">
+                        <div class="card-body">
+                            <h5 class="card-title">Cabo USB</h5>
+                            <p class="card-text">Cabo USB de alta velocidade.</p>
+                            <button class="btn btn-primary buy-now" data-product="Cabo USB">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Fone Bluetooth.jpg" class="card-img-top" alt="Fone Bluetooth">
+                        <div class="card-body">
+                            <h5 class="card-title">Fone Bluetooth</h5>
+                            <p class="card-text">Fone Bluetooth sem fio com alta qualidade de áudio.</p>
+                            <button class="btn btn-primary buy-now" data-product="Fone Bluetooth">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Smartwatch.jpg" class="card-img-top" alt="Smartwatch">
+                        <div class="card-body">
+                            <h5 class="card-title">Smartwatch</h5>
+                            <p class="card-text">Relógio inteligente com várias funcionalidades.</p>
+                            <button class="btn btn-primary buy-now" data-product="Smartwatch">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Teclado.jpg" class="card-img-top" alt="Teclado">
+                        <div class="card-body">
+                            <h5 class="card-title">Teclado</h5>
+                            <p class="card-text">Teclado mecânico com retroiluminação.</p>
+                            <button class="btn btn-primary buy-now" data-product="Teclado">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Mouse.jpg" class="card-img-top" alt="Mouse">
+                        <div class="card-body">
+                            <h5 class="card-title">Mouse</h5>
+                            <p class="card-text">Mouse ergonômico com sensores precisos.</p>
+                            <button class="btn btn-primary buy-now" data-product="Mouse">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Headset com som surround e microfone.jpg" class="card-img-top" alt="Headset">
+                        <div class="card-body">
+                            <h5 class="card-title">Headset</h5>
+                            <p class="card-text">Headset com som surround e microfone.</p>
+                            <button class="btn btn-primary buy-now" data-product="Headset">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Hub USB com várias portas.jpg" class="card-img-top" alt="Hub USB">
+                        <div class="card-body">
+                            <h5 class="card-title">Hub USB</h5>
+                            <p class="card-text">Hub USB com várias portas.</p>
+                            <button class="btn btn-primary buy-now" data-product="Hub USB">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Monitor LED Full HD de 24 polegadas.jpg" class="card-img-top" alt="Monitor">
+                        <div class="card-body">
+                            <h5 class="card-title">Monitor</h5>
+                            <p class="card-text">Monitor LED Full HD de 24 polegadas.</p>
+                            <button class="btn btn-primary buy-now" data-product="Monitor">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Teclado compacto para dispositivos móveis.jpg" class="card-img-top" alt="Teclado Mínib">
+                        <div class="card-body">
+                            <h5 class="card-title">Teclado Mínib</h5>
+                            <p class="card-text">Teclado compacto para dispositivos móveis.</p>
+                            <button class="btn btn-primary buy-now" data-product="Teclado Mínib">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Disco rígido externo de 1TB.jpg" class="card-img-top" alt="Disco Rígido">
+                        <div class="card-body">
+                            <h5 class="card-title">Disco Rígido</h5>
+                            <p class="card-text">Disco rígido externo de 1TB.</p>
+                            <button class="btn btn-primary buy-now" data-product="Disco Rígido">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Webcam Full HD com microfone.jpg" class="card-img-top" alt="Webcam">
+                        <div class="card-body">
+                            <h5 class="card-title">Webcam</h5>
+                            <p class="card-text">Webcam Full HD com microfone.</p>
+                            <button class="btn btn-primary buy-now" data-product="Webcam">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Caixa de som Bluetooth com áudio de alta qualidade.png" class="card-img-top" alt="Caixa de Som">
+                        <div class="card-body">
+                            <h5 class="card-title">Caixa de Som</h5>
+                            <p class="card-text">Caixa de som Bluetooth com áudio de alta qualidade.</p>
+                            <button class="btn btn-primary buy-now" data-product="Caixa de Som">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Roteador Wi-Fi com alta velocidade de transmissão.png" class="card-img-top" alt="Roteador">
+                        <div class="card-body">
+                            <h5 class="card-title">Roteador</h5>
+                            <p class="card-text">Roteador Wi-Fi com alta velocidade de transmissão.</p>
+                            <button class="btn btn-primary buy-now" data-product="Roteador">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Adaptador USB-C para HDMI.jpg" class="card-img-top" alt="Adaptador">
+                        <div class="card-body">
+                            <h5 class="card-title">Adaptador</h5>
+                            <p class="card-text">Adaptador USB-C para HDMI.</p>
+                            <button class="btn btn-primary buy-now" data-product="Adaptador">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Consola de jogo com 4K e compatível com VR.jpg" class="card-img-top" alt="Consola de Jogo">
+                        <div class="card-body">
+                            <h5 class="card-title">Consola de Jogo</h5>
+                            <p class="card-text">Consola de jogo com 4K e compatível com VR.</p>
+                            <button class="btn btn-primary buy-now" data-product="Consola de Jogo">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Microfone profissional com alta qualidade de gravação.jpg" class="card-img-top" alt="Microfone">
+                        <div class="card-body">
+                            <h5 class="card-title">Microfone</h5>
+                            <p class="card-text">Microfone profissional com alta qualidade de gravação.</p>
+                            <button class="btn btn-primary buy-now" data-product="Microfone">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Disco SSD de 512GB para aumento de desempenho.jpg" class="card-img-top" alt="Disco SSD">
+                        <div class="card-body">
+                            <h5 class="card-title">Disco SSD</h5>
+                            <p class="card-text">Disco SSD de 512GB para aumento de desempenho.</p>
+                            <button class="btn btn-primary buy-now" data-product="Disco SSD">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Adaptador de cartão SD para USB.jpg" class="card-img-top" alt="Adaptador de Cartão">
+                        <div class="card-body">
+                            <h5 class="card-title">Adaptador de Cartão</h5>
+                            <p class="card-text">Adaptador de cartão SD para USB.</p>
+                            <button class="btn btn-primary buy-now" data-product="Adaptador de Cartão">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="imagens/Carregador sem fio compatível com a maioria dos smartphones.jpeg" class="card-img-top" alt="Carregador Sem Fio">
+                        <div class="card-body">
+                            <h5 class="card-title">Carregador Sem Fio</h5>
+                            <p class="card-text">Carregador sem fio compatível com a maioria dos smartphones.</p>
+                            <button class="btn btn-primary buy-now" data-product="Carregador Sem Fio">Comprar Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Loja de Eletrônicos. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+    </footer>
+
+    <!-- Modal Login/Cadastro -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login / Cadastro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Cadastro</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <!-- Login -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">Email</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Senha</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </form>
+                        </div>
+                        <!-- Cadastro -->
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerName">Nome</label>
+                                    <input type="text" class="form-control" id="registerName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerEmail">Email</label>
+                                    <input type="email" class="form-control" id="registerEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">Senha</label>
+                                    <input type="password" class="form-control" id="registerPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
