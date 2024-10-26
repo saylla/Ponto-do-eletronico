@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css"> <!-- Adicione um CSS se necessário -->
+</head>
+<body>
+  <h1>Seu Carrinho de Compras</h1>
+  <div id="cart-items">
+    <!-- Os itens do carrinho serão exibidos aqui -->
+  </div>
+  <button onclick="finalizarCompra()">Finalizar Compra</button>
+
+  <script>
+    // Função para carregar os itens do carrinho
+    function carregarCarrinho() {
+      fetch('/api/carrinho')
+        .then(response => response.json())
+        .then(data => {
+          let cartItemsDiv = document.getElementById('cart-items');
+          if (data.items.length > 0) {
+            data.items.forEach(item => {
+              let itemDiv = document.createElement('div');
+              itemDiv.innerHTML = `<p>${item.nome} - Quantidade: ${item.quantidade} - Preço: ${item.preco}</p>`;
+              cartItemsDiv.appendChild(itemDiv);
+            });
+          } else {
+            cartItemsDiv.innerHTML = "<p>Seu carrinho está vazio.</p>";
+          }
+        });
+    }
+
+    // Carregar os itens ao abrir a página
+    window.onload = carregarCarrinho;
+
+    // Função para finalizar a compra (será redirecionado a uma outra rota)
+    function finalizarCompra() {
+      window.location.href = '/checkout';
+    }
+  </script>
+</body>
+</html>

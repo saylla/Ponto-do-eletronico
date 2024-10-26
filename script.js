@@ -26,3 +26,40 @@ document.addEventListener('DOMContentLoaded', () => {
         // Aqui você pode adicionar lógica para registro real
     });
 });
+let cart = [];
+
+function addToCart(id, name, price) {
+  // Verifica se o produto já está no carrinho
+  const existingProduct = cart.find(item => item.id === id);
+  
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({ id, name, price, quantity: 1 });
+  }
+
+  updateCartDisplay();
+}
+
+function updateCartDisplay() {
+  const cartItems = document.getElementById('cartItems');
+  cartItems.innerHTML = '';  // Limpa a lista atual
+
+  let total = 0;
+
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = `${item.name} - R$${item.price} x ${item.quantity}`;
+    cartItems.appendChild(li);
+
+    total += item.price * item.quantity;
+  });
+
+  document.getElementById('totalAmount').textContent = total.toFixed(2);
+}
+
+function checkout() {
+  alert('Compra finalizada com sucesso!');
+  cart = [];
+  updateCartDisplay();
+}

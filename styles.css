@@ -1,0 +1,69 @@
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+#productList,
+#cart {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.body {
+  width: 100px;
+  height: auto;
+
+
+
+  .logo {
+    width: 10px !important;
+    height: auto !important;
+  }
+
+}
+
+.custom-logo {
+  width: 50px !important;
+  height: auto !important;
+}
